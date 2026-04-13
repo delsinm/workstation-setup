@@ -1,6 +1,6 @@
 # Workstation Setup Scripts
 
-A collection of three bash scripts for provisioning a Mac development workstation from scratch. Each script is focused on a single concern and can be run independently or in sequence.
+A collection of bash scripts for provisioning a Mac development workstation from scratch. Each script is focused on a single concern and can be run independently or in sequence.
 
 ---
 
@@ -28,4 +28,4 @@ A non-interactive script that installs Oh My Zsh and applies a standard `~/.zshr
 
 ## .gitignore
 
-While you're here, feel free to grab a copy of the `.gitignore` file. It works well for most DevOps use cases!
+While you're here, feel free to grab a copy of the `.gitignore` file (`gitignore.sample.txt`). It works well for most DevOps use cases!

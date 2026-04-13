@@ -1,0 +1,11 @@
+{
+  "ms-python.python": true,
+  "dbaeumer.vscode-eslint": true,
+  "esbenp.prettier-vscode": true,
+  "AmazonWebServices.aws-toolkit-vscode": true,
+  "hashicorp.terraform": true,
+  "redhat.vscode-yaml": true,
+  "concretio.markdown-for-humans": true,
+  "ms-kubernetes-tools.vscode-kubernetes-tools": true,
+  "rangav.vscode-thunder-client": true
+}

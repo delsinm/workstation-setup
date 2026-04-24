@@ -82,6 +82,10 @@ vendor/
 .DS_Store
 Thumbs.db
 
+# --- Vercel ---
+.vercel
+.env*.local
+
 # --- Ansible ---
 # Ignore retry files created when a playbook fails
 *.retry

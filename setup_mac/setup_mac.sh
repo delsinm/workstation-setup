@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# --- Mac setup script ---
+# ------- Mac setup script ------
 
-# --- Helper Functions ---
+# ------- Helper Functions ------
 print_status() { echo -e "\n\033[1;34m[INFO]\033[0m $1"; }
 print_success() { echo -e "\033[1;32m[SUCCESS]\033[0m $1"; }
 print_error() { echo -e "\033[1;31m[ERROR]\033[0m $1"; }
 
 printf "\nRunning Mac setup workflow...\n\n"
 
-# --- 1. Homebrew Check/Install ---
+# ------- 1. Homebrew Check/Install ------
 if ! command -v brew &> /dev/null; then
     print_status "Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -18,7 +18,9 @@ else
     print_success "Homebrew ready."
 fi
 
-# --- 2. Install Packages (Filters for "true") ---
+# ------- 2. Install Packages (Filters for "true") ------
+# Script must be run from same directory as packages.json
+# -------------------------------------------------------
 PACKAGE_FILE="packages.json"
 if [[ -f "$PACKAGE_FILE" ]]; then
     print_status "Processing $PACKAGE_FILE..."
@@ -38,7 +40,7 @@ else
     print_error "$PACKAGE_FILE missing."
 fi
 
-# --- 3. Create .vimrc ---
+# ------- 3. Create .vimrc ------
 print_status "Creating ~/.vimrc..."
 cat > "$HOME/.vimrc" << 'EOF'
 " Enable syntax highlighting
@@ -53,7 +55,9 @@ set relativenumber
 EOF
 print_success "~/.vimrc created."
 
-# --- 4. VS Code Extensions (Filters for "true") ---
+# ------- 4. VS Code Extensions (Filters for "true") ------
+# Script must be run from same directory as extensions.json
+# ---------------------------------------------------------
 EXTENSION_FILE="extensions.json"
 if command -v code &> /dev/null && [[ -f "$EXTENSION_FILE" ]]; then
     print_status "Installing VS Code extensions..."

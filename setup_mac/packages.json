@@ -1,5 +1,6 @@
 {
   "mas": true,
+  "asdf": true,
   "git": true,
   "gh": true,
   "node": true,
@@ -16,6 +17,7 @@
   "cron": true,
   "1password": true,
   "docker": true,
+  "lazydocker": true,
   "orbstack": false,
   "btop": true,
   "wget": true,
